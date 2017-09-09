@@ -5,7 +5,6 @@ body {
 }
 section {
 	padding: 30px;
-	height: 100%;
 	margin: 25px;
 }
 h1 {
@@ -119,21 +118,5 @@ h1 {
 }
 
 
-/**footer**/
-footer {
-	width: 100%;
-	background: #24545C;
-	height: 60px;
-	padding:5px;
-}
-.srCopyrightText {
-	color: #fff !important;
-}
 
-.srLogoFooter {
-	display: block;
-	text-align: right;
-    color: white;
-    margin-top: 4px;
-}
 
