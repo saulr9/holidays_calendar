@@ -1,0 +1,129 @@
+html,
+body {
+	height: 100%;
+	background: url('../img/gaming-pattern.png');
+}
+section {
+	padding: 30px;
+}
+h1 {
+	margin: 25px 0;
+}
+.srHide {
+	display: none !important;
+}
+.srNavbar {
+	display: block;
+	background: #24545C;
+}
+.srLogo {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+.srLogo:hover,
+.srLogoFooter:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.card {
+	background-color: #24545c !important;
+	color: #fff;
+}
+/*calendar*/
+.fc table,
+.fc-unthemed .fc-divider, 
+.fc-unthemed .fc-list-heading td, 
+.fc-unthemed .fc-popover .fc-header,
+.fc-listMonth-view {
+    background: #24545C;
+    color: #fff;
+}
+ {
+    background: #24545c;
+}
+.fc .fc-button-group > *,
+.fc-button {
+    background: #262626;
+    border: none;
+    color: #fff;
+    border-radius: 0px;
+}
+.fc-unthemed td.fc-today,
+.fc-event-dot {
+    background: #EF7266 !important;
+}
+.fc-list-item, 
+.fc-list-item:hover {
+	background: #fff;
+	color: #151515;
+}
+
+.fc-unthemed .fc-content, 
+.fc-unthemed .fc-divider, 
+.fc-unthemed .fc-list-heading td, 
+.fc-unthemed .fc-list-view, 
+.fc-unthemed .fc-popover, 
+.fc-unthemed .fc-row, 
+.fc-unthemed tbody, 
+.fc-unthemed td, 
+.fc-unthemed th, 
+.fc-unthemed thead {
+    border-color: #316771 !important;
+}
+
+
+/*Holidays*/
+.srHolidaysList {
+    border-left: 2px solid;
+    border-color: #d0ddcc;
+    padding: 0 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+.srHolidayDate {
+    /*display: inline-block;
+    float: left;*/
+}
+.srHolidayDescription {
+    /*display: inline-block;
+    padding: 0 8px;
+*/
+}
+.srHolidayMotivo {
+	font-weight: bold;
+}
+.srHolidayDay,
+.srHolidayMonth {
+	display: block;
+}
+
+.srHolidayDay{
+	font-weight: bold;
+	font-size: 22px;
+}
+.srHolidayAdd {
+	display: block;
+}
+
+
+/**footer**/
+footer {
+	width: 100%;
+	background: #24545C;
+	height: 60px;
+	padding:5px;
+}
+.srCopyrightText {
+	color: #fff !important;
+}
+
+.srLogoFooter {
+	display: block;
+	text-align: right;
+    color: white;
+    margin-top: 4px;
+}
+
