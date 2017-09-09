@@ -7,7 +7,6 @@ $(document).ready(function() {
   var motivo = $('.srHolidayMotivo');
   var adicional = $('.srHolidayAdd');
 
-
 //get no laborables
   $.ajax({
     url: 'http://nolaborables.com.ar/API/v1/actual',
@@ -35,17 +34,17 @@ $(document).ready(function() {
           srJson+='<span class="srHolidayAdd"><b>Opcional: </b>'+data[x].opcional+'</span>';
           srJson+='<span class="srHolidayAdd"><b>Religión: </b>'+data[x].religion+'</span>';
         }
-        
         srJson+='</div>';
       }
 
       //Armando arreglo
       var ArrayFeriados = data;
       var events = [];
-
-      for (var k = 0; k < ArrayFeriados.length; k++) {
+      for (var j = 0; j < 200; j++) {
+        for (var k = 0; k < ArrayFeriados.length; k++) {
         var mes = "";
         var dia = "";
+        var fecha="";
         if(ArrayFeriados[k]["mes"]<10){
           mes = "0" + ArrayFeriados[k]["mes"];
         }
@@ -58,20 +57,27 @@ $(document).ready(function() {
         else{
           dia = ArrayFeriados[k]["dia"];
         }
+
         events.push({
             id: "hd-"+k,
             title: ArrayFeriados[k]["motivo"],
-            start: (new Date()).getFullYear()+'-'+mes+'-'+dia,
+            start: ((new Date()).getFullYear()+j)+'-'+mes+'-'+dia,
             color: '#d0ddcc',
             textColor: '#000'
         });
       }
-      allHolidays.append(srJson);
+      }
 
+      console.log(events);
+      allHolidays.append(srJson);
       //init calendar
+
       $('#calendar').fullCalendar({
+
         eventClick: function(calEvent, jsEvent, view) {
-    
+        console.log(calEvent);
+        console.log(jsEvent);
+        console.log(view);
         $('#'+calEvent.id+'').removeClass('srHide');
         },
         header: {
@@ -81,6 +87,7 @@ $(document).ready(function() {
       },
         events: events
       });
+
     },
     error: function(data){
     },
