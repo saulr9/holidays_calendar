@@ -1,12 +1,6 @@
 $(document).ready(function() {
 //vars
   var allHolidays = $('.srAllHolidays');
-  var holidayCard = $('srHolidaysList');
-  var dia = $('.srHolidayDay');
-  var mes = $('.srHolidayMonth');
-  var motivo = $('.srHolidayMotivo');
-  var adicional = $('.srHolidayAdd');
-
 
 //get no laborables
   $.ajax({
