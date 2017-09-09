@@ -5,6 +5,8 @@ body {
 }
 section {
 	padding: 30px;
+	height: 100%;
+	margin: 25px;
 }
 h1 {
 	margin: 25px 0;
