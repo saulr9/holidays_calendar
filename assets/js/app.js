@@ -1,11 +1,4 @@
 $(document).ready(function() {
-//vars
-  var allHolidays = $('.srAllHolidays');
-  var holidayCard = $('srHolidaysList');
-  var dia = $('.srHolidayDay');
-  var mes = $('.srHolidayMonth');
-  var motivo = $('.srHolidayMotivo');
-  var adicional = $('.srHolidayAdd');
 
 //get no laborables
   $.ajax({
@@ -16,7 +9,7 @@ $(document).ready(function() {
 
       //Datos a mostrar en la columna izquierda
       var srJson ='';
-      for( x in data ){
+      for( x in data ) {
 
         srJson+='<div id='+'hd-'+x+' class="srHolidaysList srHide">';
         srJson+='<div class="srHolidayDate">';
