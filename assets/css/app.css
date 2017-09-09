@@ -92,15 +92,15 @@ h1 {
     margin-bottom: 8px;
     display: inline-block;
 }
-.srHolidayDate {
-    /*display: inline-block;
-    float: left;*/
+.srCloseDetail {
+    position: absolute;
+    right: 25px;
+    color: #e42355 !important;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
 }
-.srHolidayDescription {
-    /*display: inline-block;
-    padding: 0 8px;
-*/
-}
+
 .srHolidayMotivo {
 	font-weight: bold;
 }
