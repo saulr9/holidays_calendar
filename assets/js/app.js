@@ -67,8 +67,6 @@ $(document).ready(function() {
         });
       }
       }
-
-      console.log(events);
       allHolidays.append(srJson);
       //init calendar
 
