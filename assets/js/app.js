@@ -62,9 +62,15 @@ $(document).ready(function() {
         });
       }
       allHolidays.append(srJson);
-
+      var actualYear = (new Date()).getFullYear();
+      var startYear = actualYear+'-'+'01'+'-'+'01';
+      var endYear = actualYear+'-'+'12'+'-'+'31';
       //init calendar
       $('#calendar').fullCalendar({
+        validRange: {
+        start: startYear,
+        end: endYear
+        },
         eventClick: function(calEvent, jsEvent, view) {
     
         $('#'+calEvent.id+'').removeClass('srHide');
