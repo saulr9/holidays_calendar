@@ -1,4 +1,7 @@
 $(document).ready(function() {
+//vars
+  var allHolidays = $('.srAllHolidays');
+
 
 //get no laborables
   $.ajax({
