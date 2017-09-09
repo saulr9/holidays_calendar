@@ -1,6 +1,7 @@
 $(document).ready(function() {
 //vars
   var allHolidays = $('.srAllHolidays');
+  var srLoading = $('.srLoading');
 
 //get no laborables
   $.ajax({
@@ -8,7 +9,7 @@ $(document).ready(function() {
     dataType: 'json',
     type: 'GET',
     success: function(data){
-
+      srLoading.hide();
       //Datos a mostrar en la columna izquierda
       var srJson ='';
       for( x in data ){
