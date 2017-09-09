@@ -17,7 +17,7 @@ $(document).ready(function() {
         srJson+='<div id='+'hd-'+x+' class="srHolidaysList srHide">';
         srJson+='<div class="srHolidayDate">';
         srJson+='<span class="srHolidayDay">'+data[x].dia+'</span>';
-        srJson+='<span class="srHolidayMonth"> Mes: '+data[x].mes+'</span>';
+        srJson+='<span class="srHolidayMonth"><b>Fecha:</b> '+data[x].dia+'-'+data[x].mes+'</span>';
         srJson+='</div>';
         srJson+='<div class="srHolidayDescription">';
         srJson+='<span class="srHolidayMotivo">'+data[x].motivo+'</span>';
