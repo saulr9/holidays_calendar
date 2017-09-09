@@ -67,7 +67,7 @@ $(document).ready(function() {
       //init calendar
       var actualYear = (new Date()).getFullYear();
       var startYear = '2010-01-01';
-      var endYear = (actualYear+2)+'-'+'12'+'-'+'31';
+      var endYear = (actualYear+5)+'-'+'12'+'-'+'31';
       $('#calendar').fullCalendar({
         validRange: {
         start: startYear,
