@@ -1,6 +1,7 @@
 $(document).ready(function() {
 //vars
   var allHolidays = $('.srAllHolidays');
+  var srLoading = $('.srLoading');
 
 
 //get no laborables
@@ -9,7 +10,7 @@ $(document).ready(function() {
     dataType: 'json',
     type: 'GET',
     success: function(data){
-
+      srLoading.hide();
       //Datos a mostrar en la columna izquierda
       var srJson ='';
       for( x in data ) {
@@ -57,7 +58,7 @@ $(document).ready(function() {
         events.push({
             id: "hd-"+k,
             title: ArrayFeriados[k]["motivo"],
-            start: ((new Date()).getFullYear()+j)+'-'+mes+'-'+dia,
+            start: (2010+j)+'-'+mes+'-'+dia,
             color: '#d0ddcc',
             textColor: '#000'
         });
@@ -65,9 +66,14 @@ $(document).ready(function() {
       }
       allHolidays.append(srJson);
       //init calendar
-
+      var actualYear = (new Date()).getFullYear();
+      var startYear = '2010-01-01';
+      var endYear = (actualYear+2)+'-'+'12'+'-'+'31';
       $('#calendar').fullCalendar({
-
+        validRange: {
+        start: startYear,
+        end: endYear
+      },
         eventClick: function(calEvent, jsEvent, view) {
         console.log(calEvent);
         console.log(jsEvent);

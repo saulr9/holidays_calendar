@@ -32,6 +32,14 @@ h1 {
 	background-color: #24545c !important;
 	color: #fff;
 }
+.srLoading {
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+}
 /*calendar*/
 .fc table,
 .fc-unthemed .fc-divider, 
@@ -108,22 +116,4 @@ h1 {
 	display: block;
 }
 
-
-/**footer**/
-footer {
-	width: 100%;
-	background: #24545C;
-	height: 60px;
-	padding:5px;
-}
-.srCopyrightText {
-	color: #fff !important;
-}
-
-.srLogoFooter {
-	display: block;
-	text-align: right;
-    color: white;
-    margin-top: 4px;
-}
 
