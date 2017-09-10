@@ -27,6 +27,13 @@ h1 {
 	text-decoration: none;
 	color: #fff;
 }
+.srFullCalendar h1 {
+    display: inline-block;
+    border: 5px solid #249991;
+    box-shadow: 5px 5px #24545c;
+    position: relative;
+    padding: 4px;
+}
 
 .card {
 	background-color: #24545c !important;
@@ -35,6 +42,7 @@ h1 {
 .srLoading {
     position: absolute;
     z-index: 9999;
+    top: 50%;
     left: 0;
     right: 0;
     text-align: center;
@@ -90,7 +98,13 @@ h1 {
     padding: 4px 8px;
     margin-top: 15px;
     margin-bottom: 8px;
-    display: inline-block;
+    display: block;
+    border: 5px solid #249991;
+    box-shadow: 5px 5px #24545c;
+    position: relative;
+    padding: 4px;
+    width: 100%;
+    min-height: 130px;
 }
 .srCloseDetail {
     position: absolute;
@@ -112,17 +126,18 @@ h1 {
 }
 
 .srHolidayDay{
-	font-weight: bold;
-	font-size: 90px;
-	color: #249991;
-	position: absolute;
-	z-index: 1;
-	right: 0;
-	margin-top: 15px;
-	opacity: 0.7;
+    font-weight: bold;
+    font-size: 90px;
+    color: #249991;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    opacity: 0.7;
 }
 .srHolidayAdd {
-	display: block;
+    display: block;
+    position: relative;
+    z-index: 2;
 }
 
 
