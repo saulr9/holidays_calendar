@@ -3,7 +3,6 @@ $(document).ready(function() {
   var allHolidays = $('.srAllHolidays');
   var srLoading = $('.srLoading');
 
-
 //get no laborables
   $.ajax({
     url: 'http://nolaborables.com.ar/API/v1/actual',
@@ -15,10 +14,10 @@ $(document).ready(function() {
       var srJson ='';
       for( x in data ) {
 
-        srJson+='<div id='+'hd-'+x+' class="srHolidaysList srHide">';
+        srJson+='<div id='+'hd-'+x+' class="srHolidaysList srHide"><a class="srCloseDetail">X</a>';
         srJson+='<div class="srHolidayDate">';
         srJson+='<span class="srHolidayDay">'+data[x].dia+'</span>';
-        srJson+='<span class="srHolidayMonth"> Mes: '+data[x].mes+'</span>';
+        srJson+='<span class="srHolidayMonth"> <b>Fecha:</b> '+data[x].dia+'-'+data[x].mes+'</span>';
         srJson+='</div>';
         srJson+='<div class="srHolidayDescription">';
         srJson+='<span class="srHolidayMotivo">'+data[x].motivo+'</span>';
@@ -75,9 +74,7 @@ $(document).ready(function() {
         end: endYear
       },
         eventClick: function(calEvent, jsEvent, view) {
-        console.log(calEvent);
-        console.log(jsEvent);
-        console.log(view);
+
         $('#'+calEvent.id+'').removeClass('srHide');
         },
         header: {
@@ -87,11 +84,19 @@ $(document).ready(function() {
       },
         events: events
       });
+        var srClose = $('.srCloseDetail');
+        srClose.click(function() {
+          var closeHoliday = $(this).parent().attr('id');
+          $('#'+closeHoliday).addClass('srHide');
+        });
+
 
     },
     error: function(data){
     },
 });
+
+
 
 
 

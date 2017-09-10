@@ -61,7 +61,7 @@ h1 {
 }
 .fc-unthemed td.fc-today,
 .fc-event-dot {
-    background: #EF7266 !important;
+    background: #4ecdc4 !important;
 }
 .fc-list-item, 
 .fc-list-item:hover {
@@ -86,22 +86,25 @@ h1 {
 /*Holidays*/
 .srHolidaysList {
     border-left: 2px solid;
-    border-color: #d0ddcc;
-    padding: 0 8px;
+    border-color: #249991;
+    padding: 4px 8px;
+    margin-top: 15px;
     margin-bottom: 8px;
     display: inline-block;
 }
-.srHolidayDate {
-    /*display: inline-block;
-    float: left;*/
+.srCloseDetail {
+    position: absolute;
+    right: 25px;
+    color: #e42355 !important;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
 }
-.srHolidayDescription {
-    /*display: inline-block;
-    padding: 0 8px;
-*/
-}
+
 .srHolidayMotivo {
 	font-weight: bold;
+	position: relative;
+	z-index: 2;
 }
 .srHolidayDay,
 .srHolidayMonth {
@@ -110,7 +113,13 @@ h1 {
 
 .srHolidayDay{
 	font-weight: bold;
-	font-size: 22px;
+	font-size: 90px;
+	color: #249991;
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	margin-top: 15px;
+	opacity: 0.7;
 }
 .srHolidayAdd {
 	display: block;
